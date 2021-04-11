@@ -1,0 +1,15 @@
+# 模拟post请求
+- config:
+    name: "修改标签"
+    base_url: "https://api.weixin.qq.com"
+- test:
+    name: "编辑标签"
+    request:
+      url: "/cgi-bin/tags/update"
+      method: 'POST'
+      params:
+        access_token: "44_YCxb4k6rPAAlI5MOBmPxrZd_mgOMH9zXgPJ3OfkQoHuiNZDQmJvRQgXmByECpGSCFpDeVmRYUEuMA6Gf0aZ2YFTJJIHdgO4-8PS8hN-ia3uBFMfsMfETpeI-obNN9OzW7JNlhge7SnKnRAdDMNXbAAASTD"
+      json: {   "tag" : {     "id" : 103,     "name" : "student"   } }
+    validate:
+      - eq: ["status_code",200]
+
