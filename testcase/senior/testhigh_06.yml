@@ -1,0 +1,17 @@
+#测试用例分层示例2
+- config:
+    name: "获取token--修改标签--查询标签"
+
+- test:
+    name: "获取token--修改标签"
+    testcase: testcase/senior/testhigh_05.yml
+    extract:
+      - token
+
+- test:
+    name: "查询修改标签"
+    api: api/uesr_manager/select_tag_info_api.yml
+    extract:
+      - tag_name: content.tags.6.name
+    validate:
+      - eq: [$tag_name,"student"]

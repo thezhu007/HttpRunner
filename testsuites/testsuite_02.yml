@@ -1,0 +1,9 @@
+# 测试用例集示例2
+config:
+  name: "开始开发模块用例"
+
+testcases:
+  百度测试用例:
+    testcase: testcase/senior/testhigh_02.yml
+  获取token--修改标签--查询标签用例:
+    testcase: testcase/senior/testhigh_06.yml

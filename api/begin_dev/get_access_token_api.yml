@@ -1,0 +1,12 @@
+#获取token接口定义
+name: "get_access_token_api"
+base_url: ${ENV(HOSTS)}
+request:
+  method: "GET"
+  url: '/cgi-bin/token'
+  params:
+    grant_type: "client_credential"
+    appid: "wx351a03f64f7b147f"
+    secret: "d80a853d34c3fc7788a8cd9579302b84"
+validate:
+  - eq: ["status_code",200]

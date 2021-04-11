@@ -8,8 +8,8 @@
           method: "GET"
           url: '/cgi-bin/tags/get'
           params:
-            access_token: "44_YCxb4k6rPAAlI5MOBmPxrZd_mgOMH9zXgPJ3OfkQoHuiNZDQmJvRQgXmByECpGSCFpDeVmRYUEuMA6Gf0aZ2YFTJJIHdgO4-8PS8hN-ia3uBFMfsMfETpeI-obNN9OzW7JNlhge7SnKnRAdDMNXbAAASTD"
+            access_token: "44_Dhvwynhg7GwohOkfSTodEzUpszBEI1LnautOSB-lqqw2FULml6vhBlez8ECvaeunRNsP_2oEUX4BwQi9wQz-ffGfA7aNtJY1Ag3lDlar04OfdJjBHBZbJ5JMjwc3QDF2P4PS4l9pOEAwvYIUXRAiADAFZI"
       extract:
-        - tag_name: content.tags.13.name
+        - tag_name: content.tags.5.name
       validate:
           - eq: ["status_code",200]

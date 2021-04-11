@@ -1,0 +1,17 @@
+# 断言写法
+- config:
+    name: '验证能否打开newdream主页'
+    base_url: 'http://www.hnxmxit.com'
+#测试步骤
+- test:
+    name: 'exec hnxmxit api' # 测试步骤名称
+    request:
+      url: '/' #请求地址
+      method: 'GET'
+    validate:
+      - eq: ["status_code",200] #验证响应状态码是否为200 eq表示断言语句
+      - equals: ["status_code",200]
+      - ==: ["status_code",200]
+      - is: ["status_code",200]
+      - count_eq: ["reason",2]
+      - {"check": "OK","comparator": "==","except": "OK"}

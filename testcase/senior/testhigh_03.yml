@@ -1,0 +1,21 @@
+# hook机制
+# debugtalk示例
+- config:
+    name: '验证能否打开newdream主页'
+    base_url: ${ENV(HOSTS)}
+    setup_hook:
+      - ${setup_test_step()}
+    teardown_hook:
+      - ${teardown_test_step()}
+
+- test:
+    name: "执行百度"
+    setup_hook:
+      - ${setup_test_case(登录首页)}
+    teardown_hook:
+      - ${teardown_test_case(登录首页)}
+    request:
+      url: '/' #请求地址
+      method: 'GET'
+    validate:
+      - eq: ["status_code",200] #验证响应状态码是否为200 eq表示断言语句

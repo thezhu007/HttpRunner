@@ -1,0 +1,22 @@
+# 跨文件传递参数-修改标签api--testcase
+- config:
+    name: "获取token--修改标签"
+    base_url: 'https://api.weixin.qq.com'
+
+- test:
+    name: "获取token"
+    testcase: testcase/testdemo_0901.yml
+    extract:
+      - token
+
+
+- test:
+    name: "修改标签"
+    request:
+      url: "/cgi-bin/tags/update"
+      method: "POST"
+      params:
+        access_token: $token
+      json: {   "tag" : {     "id" : 103,     "name" : "student124"   } }
+    validate:
+      - eq: ["status_code",200]

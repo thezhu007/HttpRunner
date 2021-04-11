@@ -1,0 +1,17 @@
+#skipIf 跳过测试步骤
+- config:
+    name: '验证能否打开newdream主页'
+    base_url: ${ENV(HOSTS)}
+#测试步骤
+- test:
+    name: 'exec hnxmxit api' # 测试步骤名称
+    #skipIf 跳过测试步骤
+#    skipIf: ${get_condition()} #条件为真时跳过
+    skipUnless: ${get_condition()} #条件为假时跳过
+    request:
+      url: '/' #请求地址
+      method: 'GET'
+    validate:
+      - eq: ["status_code",200] #验证响应状态码是否为200 eq表示断言语句
+
+

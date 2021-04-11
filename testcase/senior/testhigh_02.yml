@@ -1,0 +1,23 @@
+# debugtalk示例
+- config:
+    name: "百度搜索"
+    base_url: "https://www.baidu.com"
+    export:
+      - title
+
+
+
+- test:
+    name: "执行百度"
+    request:
+      method: "GET"
+      url: "/s"
+      params:
+        wd: ${get_value()}
+      headers:
+        Accept: "text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01"
+        User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36"
+    extract:
+      - title: <title>(.+?)</title>
+    validate:
+      - eq: ["status_code",200]

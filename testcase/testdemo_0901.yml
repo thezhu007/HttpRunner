@@ -1,0 +1,20 @@
+#跨文件传递参数-获取token--output
+- config:
+    name: "获取token--修改标签"
+    base_url: 'https://api.weixin.qq.com'
+    output:
+      - token
+
+- test:
+    name: "获取token"
+    request:
+      method: "GET"
+      url: "/cgi-bin/token"
+      params:
+        grant_type: "client_credential"
+        appid: "wx351a03f64f7b147f"
+        secret: "d80a853d34c3fc7788a8cd9579302b84"
+    extract:
+      - token: content.access_token
+    validate:
+      - eq: ["status_code",200]

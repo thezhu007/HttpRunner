@@ -1,0 +1,11 @@
+# 测试用例集示例
+- config:
+    name: ""
+
+testcase:
+  - name: "百度搜索用例"
+    testcase:testcase/senior/testhigh_02.yml
+  - name: "获取token--修改标签用例"
+    testcase:testcase/senior/testhigh_05.yml
+  - name: "获取token--修改标签--查询标签"
+    testcase:testcase/senior/testhigh_05.yml
