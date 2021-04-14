@@ -1,0 +1,13 @@
+- config:
+    name: "百度搜索"
+    base_url: "https://www.baidu.com"
+    export:
+      - title
+
+- test:
+    name: "调用百度搜索接口"
+    api: /HttpRunner/api/baidu_api/baidu_search_api.yml
+    extract:
+      - title: <title>(.+?)</title>
+    validate:
+      - eq: ["status_code",200]

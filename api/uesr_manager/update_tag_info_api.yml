@@ -1,10 +1,11 @@
 name: "update_tag_info_api"
-base_url: {ENV(HOSTS)}
+base_url: ${ENV(HOSTS)}
 request:
   method: 'POST'
   url: "/cgi-bin/tags/update"
   params:
     access_token: $token
-  json: {   "tag" : {     "id" : 103,     "name" : "student777"   } }
+  json: {   "tag" : {     "id" : 103,     "name" : "student332"   } }
 validate:
   - eq: ["status_code",200]
+

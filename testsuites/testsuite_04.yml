@@ -1,0 +1,9 @@
+# 参数化方式一：
+config:
+  name: "百度搜索参数化"
+
+testcases:
+  - name: "百度搜素case"
+    testcase: "testcase/20210414/test_baidu_search_02.yml"
+    variables:
+      baidu_searh_word: "12306"

@@ -1,7 +1,8 @@
 #测试用例分层示例1
 - config:
     name: "获取token--修改标签"
-#    output: token
+    output:
+      - token
 
 
 - test:
@@ -14,6 +15,8 @@
     name: "执行修改标签的接口"
     api: api/uesr_manager/update_tag_info_api.yml
     extract:
-      - errorcode: content.errorcode
+      - errorcode: content.errcode
     validate:
       - eq: [$errorcode,0]
+
+

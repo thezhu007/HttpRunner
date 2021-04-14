@@ -1,0 +1,9 @@
+# 参数化方式一：
+config:
+  name: "百度搜索参数化"
+
+testcases:
+  - name: "百度搜素case"
+    testcase: "testcase/20210414/test_baidu_search_01.yml"
+    parameters:
+      baidu_searh_word-excepted_result: [["newdream","newdream_百度搜索"],["12306","12306_百度搜索"]]

@@ -1,7 +1,7 @@
 name: "select_tag_info_api"
-base_url: {ENV(HOSTS)}
+base_url: ${ENV(HOSTS)}
 request:
-  method: 'POST'
+  method: 'GET'
   url: "/cgi-bin/tags/get"
   params:
     access_token: $token

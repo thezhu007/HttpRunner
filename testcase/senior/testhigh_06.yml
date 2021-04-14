@@ -12,6 +12,6 @@
     name: "查询修改标签"
     api: api/uesr_manager/select_tag_info_api.yml
     extract:
-      - tag_name: content.tags.6.name
+      - tag_name: content.tags.2.name
     validate:
-      - eq: [$tag_name,"student"]
+      - eq: [$tag_name,"student332"]
